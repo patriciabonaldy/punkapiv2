@@ -4,7 +4,8 @@ import (
 	"os"
 	"runtime/pprof"
 
-	"github.com/patriciabonaldy/punkapiv2/internal/cli"
+	cli "github.com/patriciabonaldy/punkapiv2/internal/cli/storage"
+
 	service "github.com/patriciabonaldy/punkapiv2/internal/cli/fetching"
 	storage "github.com/patriciabonaldy/punkapiv2/internal/cli/storage"
 	"github.com/spf13/cobra"

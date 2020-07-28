@@ -1,3 +1,8 @@
-module github.com/patriciabonaldy/punkapiV2
+module github.com/patriciabonaldy/punkapiv2
 
 go 1.14
+
+require (
+	github.com/pkg/errors v0.9.1
+	github.com/spf13/cobra v1.0.0
+)
