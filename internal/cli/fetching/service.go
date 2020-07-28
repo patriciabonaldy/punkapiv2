@@ -38,6 +38,15 @@ func findBeersbyAbv(r *service, chanelAbv *chan float32, chanelBeer *chan []Beer
 	}
 }
 
+func getBeers(beers []Beer, chanelBeer *chan []Beer) []Beer {
+	for {
+		select {
+		case beers = <-chanelBeer:
+			return beer
+		}
+	}
+}
+
 func (r *service) FetchBeers() ([]beerscli.Beer, error) {
 	//chanelAbv y chanelBeer  channel
 	var chanelAbv = make(chan float32, 10)
@@ -51,7 +60,9 @@ func (r *service) FetchBeers() ([]beerscli.Beer, error) {
 
 	for _, beer := range beers {
 		chanelAbv <- beer.Abv
+		var beers []Beer
 		go findBeersbyAbv(&r, &chanelAbv, &chanelBeer)
+		beers = go getBeers(beers, &chanelBeer)
 	}
 
 	return beers, nil
