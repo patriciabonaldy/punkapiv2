@@ -1,10 +1,12 @@
 package fetching
 
+
+
 import (
 	"fmt"
 	"math"
 
-	"github.com/patriciabonaldy/punkapiV2/internal/errors"
+	"github.com/patriciabonaldy/punkapiv2/internal/errors"
 	beerscli "github.com/patriciabonaldy/punkapiv2/internal"
 	storage "github.com/patriciabonaldy/punkapiv2/internal/cli/storage"
 )

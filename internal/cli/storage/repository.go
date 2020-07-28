@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	beer "github.com/patriciabonaldy/punkapiV2/internal"
-	"github.com/patriciabonaldy/punkapiV2/internal/errors"
+	beer "github.com/patriciabonaldy/punkapiv2/internal"
+	"github.com/patriciabonaldy/punkapiv2/internal/errors"
 )
 
 //AbvEndpoint endpoint abv
